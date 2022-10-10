@@ -1,6 +1,6 @@
 /**
  * Note: The returned array must be malloced, assume caller calls free().
- 执行用时: 80ms, 内存消耗:5.5MB
+ * 执行用时: 32ms, 内存消耗:5.8MB
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,26 +12,20 @@ bool isPalindrome(int x)
 
     if (x < 0)
         return false;
-    int p[10];
-    int digits;
-    for (digits = 0; x != 0; digits++)
+    long int cus = 0;
+    int num = x;
+    while (num != 0)
     {   
-        p[digits] = x%10;
-        x = x / 10; 
-        printf("p: %d\n", p[digits]);
-        
-    }
-    printf("digits: %d\n", digits);
-    for(int i=0;i<digits;i++){
-        printf("%d, %d\n", p[i], p[digits-1-i]);
-        if(p[i] != p[digits-1-i]) return false;
+        cus = cus*10 + num%10;
+        num = num/10;
+        printf("cus: %d, num: %d\n", cus, num);
     }
     
-    return true;
+    return cus == x;
 }
 int main()
 {
     printf("isPalindrome: %s\n", isPalindrome(121) ? "true" : "false");
     printf("isPalindrome: %s\n", isPalindrome(51215) ? "true" : "false");
-    printf("isPalindrome: %s\n", isPalindrome(10) ? "true" : "false");
+    printf("isPalindrome: %s\n", isPalindrome(998765432) ? "true" : "false");
 }
