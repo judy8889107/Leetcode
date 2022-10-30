@@ -5,6 +5,8 @@ import java.lang.*;
  * stack存放open bracket，內層的放在最上面
  * 檢查close bracket，若符合則remove stack top
  * 否則返回false
+ * 执行用时：2 ms,    在所有 Java 提交中击败了 52% 的用户
+ * 内存消耗：39.4 MB, 在所有 Java 提交中击败了 67% 的用户
  */
 class Solution {
     public boolean isValid(String s) {
