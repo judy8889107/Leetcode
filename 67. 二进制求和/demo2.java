@@ -26,8 +26,6 @@ class Solution {
         boolean carry = false;
         
         for (int i = result.length-1, j = b.length()-1; i > -1; i--, j--) {
-
-            
             if( j < 0){
                 if(!carry) break;
                 if(result[i] == '1'){
@@ -58,14 +56,11 @@ class Solution {
             }else{ // 10,01
                 result[i] = '1';
             }
-            // System.out.println("t: "+String.valueOf(result));
             
         }
-
         String ans = String.valueOf(result);
         if(carry) ans = '1'+ans;
-
-        // System.out.println(ans);
+        
         return ans;
     }
 }
