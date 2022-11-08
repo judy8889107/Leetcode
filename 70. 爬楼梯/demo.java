@@ -9,14 +9,11 @@ class Solution {
 
         int two_nums = n/2;
         int count = n;
-        // System.out.println("two_nums: "+two_nums);
         for(int i=2; i<=two_nums;i++ ){
-            // System.out.println("i: "+i);
             BigInteger top = new BigInteger("1");
             BigInteger down = new BigInteger("1");
             
            for(int j=n-i, k=1;k<=i;k++,j--){
-            // System.out.println(j+"/"+k);
             top = top.multiply(new BigInteger(Integer.toString(j)));
             down = down.multiply(new BigInteger(Integer.toString(k)));
             
@@ -24,7 +21,6 @@ class Solution {
            count += top.divide(down).intValue();
 
         }
-        // System.out.println("count: "+count);
 
         return count;
     }
