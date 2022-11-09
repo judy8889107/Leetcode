@@ -3,6 +3,9 @@ import java.util.*;
 /**
  * 执行用时：9 ms,    在所有 Java 提交中击败了 100.00% 的用户
  * 内存消耗：41.2 MB, 在所有 Java 提交中击败了 5.15%   的用户
+ * 
+ * 題解：
+ * 0個2、1個2、2個2去做排列組合
  */
 class Solution {
     public int climbStairs(int n) {
