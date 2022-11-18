@@ -34,9 +34,10 @@ class Solution {
 
     public void inorder(TreeNode root, List<Integer> list){
 
-        inorder(root.right, list);
-        System.out.println(root.val);
+        if(root == null) return;
+        inorder(root.left, list);
         list.add(root.val);
+        inorder(root.right, list);
         
 
     }
