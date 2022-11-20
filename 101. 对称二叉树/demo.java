@@ -37,7 +37,7 @@ class Solution {
         postOrder(root, postlist);
         System.out.println(Arrays.toString(prelist.toArray()));
         System.out.println(Arrays.toString(postlist.toArray()));
-        for (int i = 0; i < prelist.size(); i++) {
+        for (int i = 0; i < prelist.size()/2; i++) {
             if (prelist.get(i) != postlist.get(i))
                 return false;
         }
